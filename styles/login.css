@@ -1,0 +1,23 @@
+.form-cont {
+    background-image: url(../assets/backgrounds/backwhite.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    overflow: visible;
+    height: 100%;
+    position: relative;
+    min-height: 750px;
+}
+.form-photo {
+    justify-content: center;
+    display: flex;
+}
+.form-token {
+    position: absolute;
+    left: 123px;
+    top: 212px;
+
+}
+.form-main-img {
+    
+    max-height: 370px;
+}

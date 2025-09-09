@@ -1,0 +1,24 @@
+.main__header {
+    display: flex;
+    align-items: center;
+    gap:20px;
+    margin-top:42px;
+}
+
+.avtor a:nth-child(1) {
+    color:var(--gray)
+}
+.avtor a:nth-child(2) {
+    color:var(--lightpurple)
+}
+.avtor {
+    display: flex;
+    color:var(--greenlight)
+}
+
+@media (max-width:850px) {
+
+    .main__header {
+        display: none;
+    }
+}

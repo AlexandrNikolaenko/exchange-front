@@ -1,0 +1,39 @@
+
+
+  @font-face {
+    font-family: 'InvolveBold';
+    src:
+      url(../fonts/Invole/Involve-Bold.ttf) format('truetype'),
+      url(../fonts/Invole/Involve-Bold.woff), format(woff);
+    font-weight: bold;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'InvolveReg';
+    src:
+      url(../fonts/Invole/Involve-Regular.woff), format(woff);
+    font-weight: bold;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'InvolveMed';
+    src:
+      url(../fonts/Invole/Involve-Medium.woff), format(woff);
+    font-weight: bold;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'InvolveSB';
+    src:
+      url(../fonts/Invole/Involve-SemiBold.woff), format(woff);
+    font-weight: bold;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'InvolveB';
+    src:
+      url(../fonts/Invole/Involve-Bold.woff), format(woff);
+    font-weight: bold;
+    font-display: swap;
+  }
+

@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'InvolveReg';
+}
+ul {
+    list-style: none;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1216px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+select {
+    border: none;
+}
+:root {
+    --purple:#1E0E62;
+    --lightpurple:#482BE7;
+    --gray:#575757;
+    --greenlight:#22C55E;
+    --darkgray:#374054;
+    --graylight:#697286;
+    --bluegray:#8896AB;
+    --purplelight:#5A40E9;
+}
+@media (max-width: 1250px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+@media (max-width:850px) {
+    .container {
+        padding: 0 20px;
+    }
+}
