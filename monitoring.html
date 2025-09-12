@@ -30,17 +30,18 @@
                     <li><a href="/contacts.html">Контакты</a></li>
                 </ul>
                 <div class="header__end">
-                    <select class="lang-select">
+                    <div class="custom-lang-select">
+                    <select name="lang" class="lang-select">
                         <option value="option1">Ru</option>
                         <option value="option2">En</option>
                     </select>
-                    <a class="login__button" href="#">вход</a>
                 </div>
-                
+                <a class="login__button" href="/auth.html">вход</a>
+                </div>
             </div>
             <div class="header__mobile">
                 <div class="header__first-cont">
-                    <a href="#"><img src="./assets/images/Frame 1160.svg"/></a>
+                    <a href="/"><img src="./assets/images/Frame 1160.svg"/></a>
                 </div>
                 <ul class="burger">
                     <li></li>
@@ -64,7 +65,7 @@
                     </ul>
                 </li>
                 <div class="social">
-                <a href="#">
+                    <a href="#">
                         <img src="./assets/icons/Ywitter.svg">
                     </a>
                     <a href="#">
@@ -79,11 +80,13 @@
                 </div>
             </ul>
             <div class="header__end">
-                <select name="lang" class="lang-select">
-                    <option value="option1">Ru</option>
-                    <option value="option2">En</option>
-                </select>
-                <a class="login__button" href="#">вход</a>
+                <div class="custom-lang-select">
+                    <select name="lang" class="lang-select">
+                        <option value="option1">Ru</option>
+                        <option value="option2">En</option>
+                    </select>
+                </div>
+                <a class="login__button" href="/auth.html">вход</a>
             </div>
         </div>
     </header>

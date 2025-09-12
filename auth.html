@@ -29,17 +29,18 @@
                     <li><a href="/contacts.html">Контакты</a></li>
                 </ul>
                 <div class="header__end">
-                    <select class="lang-select">
-                        <option value="option1">Ru</option>
-                        <option value="option2">En</option>
-                    </select>
-                    <a class="login__button" href="#">вход</a>
+                    <div class="custom-lang-select">
+                        <select name="lang" class="lang-select">
+                            <option value="option1">Ru</option>
+                            <option value="option2">En</option>
+                        </select>
+                    </div>
+                    <a class="login__button" href="/auth.html">вход</a>
                 </div>
-                
             </div>
             <div class="header__mobile">
                 <div class="header__first-cont">
-                    <a href="#"><img src="./assets/images/Frame 1160.svg"/></a>
+                    <a href="/"><img src="./assets/images/Frame 1160.svg"/></a>
                 </div>
                 <ul class="burger">
                     <li></li>
@@ -78,11 +79,13 @@
                 </div>
             </ul>
             <div class="header__end">
-                <select name="lang" class="lang-select">
-                    <option value="option1">Ru</option>
-                    <option value="option2">En</option>
-                </select>
-                <a class="login__button" href="#">вход</a>
+                <div class="custom-lang-select">
+                    <select name="lang" class="lang-select">
+                        <option value="option1">Ru</option>
+                        <option value="option2">En</option>
+                    </select>
+                </div>
+                <a class="login__button" href="/auth.html">вход</a>
             </div>
         </div>
     </header>
@@ -118,7 +121,7 @@
                         
                         <p>Зарегистрировавшись, вы соглашаетесь с <a class="form-link" href="#">Условиями обслуживания</a> и <a class="form-link" href="#">Политикой конфиденциальности</a> Azazex.</p>
                         <span>Уже есть аккаунт? 
-                            <a class="form-link-main" href="#">Войти</a>
+                            <a class="form-link-main" href="/auth.html">Войти</a>
                         </span>
                         
                         <button class="form-body-button" type="submit">Зарегистрироваться</button>
