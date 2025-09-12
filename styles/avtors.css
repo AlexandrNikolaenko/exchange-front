@@ -5,15 +5,20 @@
     margin-top:42px;
 }
 
-.avtor a:nth-child(1) {
+.avtor a, .main__header a {
     color:var(--gray)
 }
-.avtor a:nth-child(2) {
+.avtor a:last-child, .main__header a:last-child {
     color:var(--lightpurple)
 }
 .avtor {
     display: flex;
-    color:var(--greenlight)
+    color:var(--greenlight);
+    gap: 2px;
+}
+
+.avtor div:first-child::after {
+    content: " •  ";
 }
 
 @media (max-width:850px) {

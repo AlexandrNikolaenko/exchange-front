@@ -1,12 +1,13 @@
 .news-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 20px;
-    column-gap: 60px;
+    row-gap: 60px;
+    column-gap: 20px;
 }
 .new img{
     width: 600px;
     height: 312px;
+    border-radius: 6px;
 }
 .new {
     width: 600px;
@@ -15,7 +16,14 @@
     font-family: 'InvolveSB';
     font-size:24px;
     color:var(--darkgray);
-    margin: 10px 0;
+    line-height: 32px;
+}
+.new-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    padding: 0 10px;
 }
 .avtor {
     margin-top:20px
@@ -24,7 +32,7 @@
     font-family: 'InvolveReg';
     font-size: 16px;
     color:var(--graylight);
-    margin-bottom: 20px;
+    line-height: 26px;
 }
 .new-button {
     background: var(--lightpurple);
@@ -44,6 +52,7 @@
     font-size: 62px;
     color:var(--darkgray);
     margin: 100px 0 60px;
+    
 }
 .news-nav {
     margin: 50px 0;
@@ -81,8 +90,8 @@
     .news-container {
         display: grid;
         grid-template-columns: repeat(2, clamp(200px, 40vw, 600px));
-        row-gap: 20px;
-        column-gap: clamp(20px, 4vw, 60px);
+        row-gap: 60px;
+        column-gap: 20px;
         width: 100%;
         margin: 0 auto;
         justify-content: center;
