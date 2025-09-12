@@ -43,6 +43,7 @@
     font-size:16px;
     font-family: 'InvolveReg';
     padding: 20px 10px 0;
+    line-height: 26px;
 }
 .why-choucing-item {
     max-width:392px;
@@ -53,6 +54,7 @@
 .why-choucing-list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 @media (max-width:1200px) {
