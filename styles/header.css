@@ -21,6 +21,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    flex-direction: row;
 }
 .login__button {
     width: 60px;
@@ -40,11 +41,46 @@
     color: #333;
     border:0px solid
 }
+.custom-lang-select {
+    position: relative;
+    display: inline-block;
+}
 .lang-select {
     font-size: 18px;
     text-transform: uppercase;
     color:var(--purple);
     font-family: 'InvolveSB';
+    padding: 10px 35px 10px 20px;
+    border-radius: 8px;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+}
+.custom-lang-select::after {
+    content: url('../assets/icons/select-arrow-down.svg');
+    width: 10px;
+    height: 8px;
+    pointer-events: none;
+    position: absolute;
+    top: 16.5px;
+    right: 20px;
+    transform: translateY(-125%);
+    /* transition: all .3s; */
+    transform-origin: center;
+}
+.custom-lang-select:focus-within::after{
+    transform: translateY(125%) rotate(-180deg);
+}
+.lang-select:hover, .lang-select:focus, .lang-select:active {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-color: var(--active-gray);
+}
+.lang-select:focus, .lang-select:active {
+    border: none;
+    outline: 1px solid var(--light-purple);
+    outline-offset: -2px;
 }
 .burder {
     width: 38px;

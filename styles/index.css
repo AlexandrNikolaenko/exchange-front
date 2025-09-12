@@ -34,6 +34,8 @@ select {
     --graylight:#697286;
     --bluegray:#8896AB;
     --purplelight:#5A40E9;
+    --active-gray: #F5F5F5;
+    --light-purple: #CDADFF;
 }
 @media (max-width: 1250px) {
     .container {
