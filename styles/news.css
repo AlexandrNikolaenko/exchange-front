@@ -75,6 +75,11 @@
     align-items: center;
     color:var(--lightpurple);
     background: #fff;
+    cursor: pointer;
+    transition: all .3s;
+}
+.page-item:hover {
+    background-color: var(--active-gray);
 }
 .page-item.active {
     background: var(--lightpurple);
