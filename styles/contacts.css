@@ -38,6 +38,9 @@
     background: #fff;
     color:var(--purple);
 }
+.cont-links-list-item a {
+    font-weight: 500;
+}
 .cont-links-list.purple-type li{
     background: var(--lightpurple);
     color:#fff;

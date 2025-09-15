@@ -52,7 +52,7 @@
     background: #fff;
     font-size: 17px;
     font-family: 'InvolveMed';
-    width: 122px;
+    width: max-content;
     border-radius: 10px;
 }
 .all-rewiev-content {
@@ -104,7 +104,7 @@
     color:#fff;
 }
 .news-blocks .news-block__list-item{
-    background: #E4E0FF;
+    background: #E0E3FF;
 }
 .news-blocks .news-block-item-button {
     background: #482BE7;
