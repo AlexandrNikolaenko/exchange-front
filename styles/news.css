@@ -52,13 +52,18 @@
     font-size: 62px;
     color:var(--darkgray);
     margin: 100px 0 60px;
-    
+}
+
+@media (max-width: 375px) {
+    .new-title {
+        font-size: 44px;
+    }
 }
 .news-nav {
     margin: 50px 0;
     display: flex;
     justify-content: center;
-    gap:8px;
+    gap:25px;
     align-items: center;
 }
 .page-item {
@@ -107,14 +112,15 @@
     }
     .new img {
         width: 600px;
-        height: 312px;
+        min-height: 312px;
     }
 }
 @media (max-width:650px) {
     .new img {
         width: 100%;
+        min-height: auto;
         height: auto;
-        aspect-ratio: 2/1;
+        aspect-ratio: 1/1;
     }
     .new {
         width: 100%;
