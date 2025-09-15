@@ -7,6 +7,9 @@
     border:none;
     background: #FAF9FF;
 }
+.list-header.active {
+    background:#F5F5F5;
+}
 .list-header.active .list-arrow {
     fill:#482BE7;
     transform: rotate(180deg);
@@ -38,6 +41,7 @@ ol {
     display: flex;
     flex-direction: column;
     gap:30px;
+    padding-bottom: 50px;
 }
 .info-list p {
     color: #697286;
@@ -46,6 +50,7 @@ li.info-list-item {
     color:#2A3342;
     list-style: none;
     border-radius: 10px;
+    overflow: hidden;
 }
 .list-header {
     padding: 15px 38px;

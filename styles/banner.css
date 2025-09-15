@@ -20,6 +20,7 @@
 }
 .banner__image.users {
     background-image: url('../assets/backgrounds/users.png');
+    background-size: contain;
 }
 .banner__image.index {
     background-image: url('../assets/backgrounds/in.png');
@@ -28,9 +29,9 @@
 .banner__image {
     height: 370px;
     width:504px;
-    background-size: contain;
+    background-size: 75%;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: bottom;
     align-items: center;
 }
 
@@ -78,16 +79,13 @@
         width: 102%;
         
     }
-    .banner__image {
-        width: 150%;
-    }
     .banner__image.faq {
         aspect-ratio: 5/3.7;
         margin-left: -42px;
         max-width: 580px;
     }
     .banner {
-        overflow-x: hidden;
+        overflow: hidden;
         width: 100%;
     }
 }
@@ -96,5 +94,25 @@
         font-size:44px;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+    }
+
+    .banner {
+        overflow: auto;
+        width: 100%;
+    }
+
+    .banner__image {
+        background-position: 65%;
+        background-size: 60%;
+    }
+
+    .banner__title div {
+        max-width: 100%;
+        text-wrap: wrap;
+    }
+
+    .banner__text {
+        width: 100%;
     }
 }
