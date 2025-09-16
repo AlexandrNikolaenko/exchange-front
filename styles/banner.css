@@ -97,7 +97,7 @@
     }
 
     .banner {
-        overflow: auto;
+        overflow: hidden;
         width: 100%;
     }
 

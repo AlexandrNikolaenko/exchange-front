@@ -23,6 +23,7 @@
 }
 .rewievs-list {
     margin-top: 92px;
+    margin-bottom: 50px;
     display: flex;
     /* grid-template-columns: repeat(4, 1fr); */
     justify-content: space-between;
