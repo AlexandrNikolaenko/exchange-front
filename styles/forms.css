@@ -146,6 +146,12 @@
     left: 123px;
     top: 212px;
 }
+
+.form-login {
+    position: absolute;
+    left: 70px;
+    top: 120px;
+}
 .password-container img {
     position: absolute;
     right:20px;
@@ -158,7 +164,7 @@
     position: relative;
 }
 @media (max-width:1200px) and (min-width:1024px){
-    .form-token {
+    .form-token, .form-login {
         position: absolute;
         right: 85vw;
     }
@@ -201,6 +207,9 @@
     .form-main-img {
         display: none;
     }
+    .form-login {
+        display: none;
+    }
 }
 @media (max-width:768px) {
     .form-photo-header {
@@ -230,7 +239,7 @@
     }
 }
 @media (max-width:1150px) {
-    .form-token {
+    .form-token, .form-login {
         left: 46px!important;
     }
 }

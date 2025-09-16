@@ -1,64 +1,131 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Раскрывающийся блок</title>
-    <style>
-        .collapsible {
-            background-color: #777;
-            color: white;
-            cursor: pointer;
-            padding: 10px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-        }
+    <title>Document</title>
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/avtors.css">
+    <link rel="stylesheet" href="./styles/forms.css">
+    <link rel="stylesheet" href="./styles/login.css">
 
-        .active, .collapsible:hover {
-            background-color: #555;
-        }
-
-        .content {
-            padding: 0 18px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-out;
-            background-color: #f1f1f1;
-            margin-top: 10px;
-        }
-
-        .content p {
-            margin: 10px 0;
-        }
-    </style>
 </head>
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__first-cont">
+                    <a href="/"><img src="./assets/images/Frame 1160.svg"/></a>
+                </div>
+               
+                <ul class="header__list">
+                    <li><a href="/rules.html">Правила обмена</a></li>
+                    <li><a href="/partners.html">Партнерам</a></li>
+                    <li><a href="/news.html">Новости</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                    <li><a href="/contacts.html">Контакты</a></li>
+                </ul>
+                <div class="header__end">
+                    <div class="custom-lang-select">
+                        <select name="lang" class="lang-select">
+                            <option value="option1">Ru</option>
+                            <option value="option2">En</option>
+                        </select>
+                    </div>
+                    <a class="login__button" href="/auth.html">вход</a>
+                </div>
+            </div>
+            <div class="header__mobile">
+                <div class="header__first-cont">
+                    <a href="/"><img src="./assets/images/Frame 1160.svg"/></a>
+                </div>
+                <ul class="burger">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="fall-menu">
+            <ul class="header__list">
+                <li><a href="/rules.html">Правила обмена</a></li>
+                <li><a href="/partners.html">Партнерам</a></li>
+                <li><a href="/news.html">Новости</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/contacts.html">Контакты</a></li>
+                <li class="support"><a href="#">Поддержка</a></li>
+                <li>
+                    <ul class="social">
 
-<h2>Пример раскрывающегося блока</h2>
+                    </ul>
+                </li>
+                <div class="social">
+                <a href="#">
+                        <img src="./assets/icons/Ywitter.svg">
+                    </a>
+                    <a href="#">
+                        <img src="./assets/icons/icon-park-outline_telegram.svg">
+                    </a>
+                    <a href="#">
+                        <img src="./assets/icons/Facebook.svg">
+                    </a>
+                    <a href="#">
+                        <img src="./assets/icons/instagram.svg">
+                    </a>
+                </div>
+            </ul>
+            <div class="header__end">
+                <div class="custom-lang-select">
+                    <select name="lang" class="lang-select">
+                        <option value="option1">Ru</option>
+                        <option value="option2">En</option>
+                    </select>
+                </div>
+                <a class="login__button" href="/auth.html">вход</a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="form-cont">
+                <div class="form-photo">
+                    <img class="form-login" src="./assets/backgrounds/login-fon.png">
+                </div>
+                <div class="form-body">
+                    <form id="registrationForm">
+                        <h2 class="form-body-header">Вход</h2>
+                        <div class="form-inputs">
+                            <input class="form-input" type="email" id="email" name="email" placeholder="E-mail" required>
+                            <div class="password-container">
+                                <input class="form-input" type="password" id="password" name="password" placeholder="Пароль" required>
+                                <img src="./assets/icons/invisible 1.svg">
+                            </div>                            
+                        </div>
+                        <span>Еще нет акаунта?
+                            <a class="form-link-main" href="/auth.html">Зарегистрироваться</a>
+                        </span>
+                        
+                        <button class="form-body-button" type="submit">Войти</button>
+                        <div class="auto-auth"> 
+                            <span>или продолжить с</span>
+                            <div class="auth-icons">
+                                <img src="./assets/icons/Facebook-au.svg">
+                                <img src="./assets/icons/apple.svg">
+                                <img src="./assets/icons/google.svg">
+                            </div>
+                        </div>
+                    </form>
+                       
+                </div>
+            </section>
+        </div>
+    </main>
 
-<button class="collapsible">Нажмите, чтобы раскрыть</button>
-<div class="content">
-    <p>Это большой текстовый блок, который можно скрыть или показать по нажатию кнопки. Здесь может быть любая информация, которую вы хотите поместить внутрь этого блока. Вы можете добавить сюда текст, изображения, таблицы и другие элементы.</p>
-    <p>Дополнительный текст, который также является частью большого текстового блока. Вы можете добавлять сколько угодно текста, и он будет отображаться внутри этого скрытого блока.</p>
-</div>
-
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    for (var i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight){
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            } 
-        });
-    }
-</script>
-
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/forms.js"></script>
 </body>
 </html>
