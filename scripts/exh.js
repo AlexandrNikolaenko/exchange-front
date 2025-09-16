@@ -139,6 +139,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (event.target.tagName === 'LI') {
                 dropdownBtn.innerHTML = `<span>${event.target.innerHTML}</span>`;
                 dropdownContent.classList.remove('show');
+            } else if (event.target.tagName === 'SPAN' || event.target.tagName === 'IMG') {
+                dropdownBtn.innerHTML = `<span>${event.target.parentElement.innerHTML}</span>`;
             }
         });
 
