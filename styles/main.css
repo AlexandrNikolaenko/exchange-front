@@ -183,10 +183,11 @@ font-family: 'InvolveB';
 }
 .exchanger-cont {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
 }
-.exchanger-out {
-    width: 455px;
+.exchanger-out, .exchanger-in {
+    width: 100%;
 }
 .fiat {
     display: flex;
@@ -242,9 +243,6 @@ color: #afb8cc;
     border-radius: 7px;
     cursor: pointer;
 }
-.exchanger-in {
-    width: 455px;
-}
 .dropdown-btn {
     width: 100%;
     background: #E9EAEB;
@@ -259,6 +257,10 @@ color: #afb8cc;
     display: flex;
     align-items: center;
     gap:10px;
+}
+.dropdown-btn span img {
+    width: 18px;
+    height: 18px;
 }
 .dropdown-list {
     width: 100%;
@@ -276,16 +278,17 @@ color: #afb8cc;
 }
 .dropdown-btn {
     width: 100%;
-    padding: 10px;
+    padding: 16px 20px;
     box-sizing: border-box;
     margin-top: 10px;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
 }
-.dropdown-btn:after {
+.dropdown-btn::before {
     content: '▼';
     font-size: 12px;
 }
@@ -293,9 +296,8 @@ color: #afb8cc;
     display: none;
     position: absolute;
     width: 100%;
-    border: 2px solid #ccc;
-    border-top: none;
-    border-radius: 0 0 4px 4px;
+    filter: drop-shadow(-2px 4px 60px rgba(0, 0, 0, 0.25));
+    border-radius: 8px;
     max-height: 0;
     overflow-y: hidden;
     background-color: white;
@@ -309,6 +311,7 @@ color: #afb8cc;
     opacity: 1;
     transition: max-height 0.3s ease-in, opacity 0.3s ease-in;
     padding: 0 10px;
+    transform: translateY(3%);
 }
 .dropdown-search {
     width: 100%;
@@ -325,7 +328,7 @@ color: #afb8cc;
 .dropdown-coins {
     
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
     padding: 15px;
     flex-wrap: wrap;
 }
@@ -339,7 +342,6 @@ color: #afb8cc;
     border:none;
     border-radius: 4px;
     transition: background-color 0.3s;
-    margin-top: 10px;
 }
 .dropdown-filters button:hover {
     background-color: #f0f0f0;
@@ -352,8 +354,15 @@ color: #afb8cc;
     list-style-type: none;
 }
 .dropdown-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding: 10px;
     cursor: pointer;
+}
+.dropdown-list li img {
+    width: 18px;
+    height: 18px;
 }
 .dropdown-list li:hover {
     background-color: #f0f0f0;
@@ -361,6 +370,7 @@ color: #afb8cc;
 .info {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 .dropdown-search-icon {
     position: absolute;
@@ -391,28 +401,40 @@ color: #afb8cc;
     background: #D9D9D9; 
     border-radius: 70px;
 }
-.info span {
+.info div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 3px;
+}
+.info div span {
     font-weight: 700;
-font-size: 15px;
-line-height: 105%;
-color: #374054;
-font-family: 'InvolveSB';
-display: flex;
+    font-size: 15px;
+    line-height: 105%;
+    color: #374054;
+    font-family: 'InvolveSB';
+    text-wrap: none;
 }
-.info p{
-    font-family: 'InvolveMed'!important;
+.info div p{
+    line-height: 105%;
+    text-wrap: none;
 }
-.minmax {
+.info div.minmax {
     display: flex;
     gap:20px;
 }
 .exchanger-info {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    gap: 226px;
 }
 .exchanger-left-cont,
 .exchanger-right-cont {
-    width:455px;
+    width:100%;
+}
+.exchanger-left-cont .info,
+.exchanger-right-cont .info {
+    padding: 8px 0;
 }
 .exchanger-down {
     display: flex;
@@ -645,25 +667,12 @@ span.error-sec {
         height: auto;
         padding: 65px 0;
     }
-    .exchanger-out,
-    .exchanger-in {
-        width:329px;
-    }
-    .exchanger-mix-button {
-        width: 50px;
-    }
     .exchanger-body {
-        max-width: 800px;
         width: 100%;
         padding: 50px 20px;
     }
     .fir .exchanger-down {
         flex-direction: row;
-    }
-    .exchanger-header {
-        flex-direction: column;
-        align-items: start;
-        gap: 10px;
     }
     .exchanger__line {
         height: 2px;
@@ -699,7 +708,12 @@ span.error-sec {
     .exchanger-values {
         grid-template-columns: repeat(2, minmax(100px, 354px));
     }
-    
+    .exchanger-mix-button {
+        width: 50px;
+    }
+    .exchanger-cont {
+        gap: 10px;
+    }
     .rewievs-list {
         display: grid;
         grid-template-columns: repeat(2, 289px);
