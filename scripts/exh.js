@@ -2,9 +2,9 @@ const transactionInfo = {
     name: '',
     card:'',
     cryptoCard:'',
-    fiat:'',
+    fiat:'RUB',
     crypto:'',
-    cryptoShort:'',
+    cryptoShort:'BTC',
     fiatOrder:'',
     cryptoOrder:'',
     sale: '',
@@ -143,13 +143,24 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownList.addEventListener('click', function(event) {
             if (event.target.tagName === 'LI') {
                 dropdownBtn.innerHTML = `<span>${event.target.innerHTML}</span>`;
-                transactionInfo.bankImg = event.target.childNodes[1].getAttribute('src');
-                transactionInfo.bank = event.target.childNodes[3].textContent;
+                if (event.target.parentElement.getAttribute('id') == "bank") {
+                    transactionInfo.bankImg = event.target.childNodes[1].getAttribute('src');
+                    transactionInfo.bank = event.target.childNodes[3].textContent;
+                } else {
+                    transactionInfo.cryptoImg = event.target.childNodes[1].getAttribute('src');
+                    transactionInfo.crypto = event.target.childNodes[3].textContent;
+                }
+
                 dropdownContent.classList.remove('show');
             } else if (event.target.tagName === 'SPAN' || event.target.tagName === 'IMG') {
                 dropdownBtn.innerHTML = `<span>${event.target.parentElement.innerHTML}</span>`;
-                transactionInfo.bankImg = event.target.parentElement.childNodes[1].getAttribute('src');
-                transactionInfo.bank = event.target.parentElement.childNodes[3].textContent;
+                if (event.target.parentElement.parentElement.getAttribute('id') == "bank") {
+                    transactionInfo.bankImg = event.target.parentElement.childNodes[1].getAttribute('src');
+                    transactionInfo.bank = event.target.parentElement.childNodes[3].textContent;
+                } else {
+                    transactionInfo.cryptoImg = event.target.parentElement.childNodes[1].getAttribute('src');
+                    transactionInfo.crypto = event.target.parentElement.childNodes[3].textContent;
+                }
                 dropdownContent.classList.remove('show');
             }
         });
