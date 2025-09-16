@@ -72,6 +72,18 @@ color: #697286;
     justify-content: center;
     align-items: center;
 }
+.exchanger .exchanger-sub::after {
+    content: "Обмен валют";
+    font-size: 17px;
+    line-height: 105%;
+    letter-spacing: -0.02em;
+    color: #374054;
+    font-family: 'InvolveMed';
+    text-wrap: nowrap;
+}
+.exchanger.thir .exchanger-sub::after {
+    content: "Подтверждение";
+}
 .exchanger-body {
     width: 1216px;
     border-radius:20px;
@@ -162,15 +174,8 @@ width: 20px;
     gap:33px;
     
 }
-.exchanger-sub span {
-    font-size: 17px;
-line-height: 105%;
-letter-spacing: -0.02em;
-color: #374054;
-font-family: 'InvolveMed';
-}
 .exchanger-main {
-    margin-top:74px;
+    margin-top:70px;
     display: flex;
     flex-direction: column;
     gap:20px;
@@ -401,6 +406,9 @@ color: #afb8cc;
     background: #D9D9D9; 
     border-radius: 70px;
 }
+.exchanger.sec .info:last-child {
+    padding: 8px 0;
+}
 .info div {
     display: flex;
     flex-wrap: wrap;
@@ -439,6 +447,7 @@ color: #afb8cc;
 .exchanger-down {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 .exchanger-work {
     font-weight: 700;
@@ -484,9 +493,7 @@ gap:10px;
 .exchanger-values-down {
     display: grid;
     grid-template-columns: repeat(2, minmax(100px, 455px));
-    justify-content: space-between;
-}
-.exchanger-values-down {
+    gap: 226px;
     margin: 10px 0;
 }
 .exchanger-values__left-cont,
@@ -508,6 +515,7 @@ gap:10px;
     border-radius: 50%;
     display: inline-block;
     position: relative;
+    min-width: 34px;
 }
 .radio-cus::after {
     content: ' ';
@@ -571,8 +579,7 @@ transform: rotate(180deg);
 .exchanger-thir__in {
     display: flex;
     flex-direction: column;
-
-    justify-content: space-between;
+    gap: 67px;
 }
 .exchanger__payment-header {
     display: flex;
@@ -659,9 +666,6 @@ span.error-sec {
     justify-content: end;
     color: #841818;
 }
-#card {
-    width: 455px;
-}
 @media (max-width:1440px) {
     .exchanger {
         height: auto;
@@ -686,9 +690,6 @@ span.error-sec {
     }
     .exchanger-values {
         grid-template-columns: repeat(2, minmax(100px, 354px));
-    }
-    #card {
-        width: 354px;
     }
 }
 @media (max-width: 1150px) {
@@ -770,7 +771,14 @@ span.error-sec {
         margin-left: -100px;
     }
 }
-@media (max-width:767px) {
+@media (max-width:800px) {
+    .exchanger-thir__out,
+    .exchanger-thir__in {
+        gap: 20px;
+    }
+    .exchanger__payment-down {
+        gap:10px;
+    }
     .exchanger-header {
         align-items: center;
     }
@@ -778,6 +786,9 @@ span.error-sec {
         flex-direction: column;
         align-items: center;
         gap:20px;
+    }
+    .exchanger.sec .info:last-child {
+        margin-top: 40px;
     }
     .exchanger-out, .exchanger-in {
         width: 100%;
@@ -802,9 +813,6 @@ span.error-sec {
         width: 186px;
         margin-top: 0;
     }
-    .exchanger-third .exchanger-sec__buttons {
-        flex-direction: column;
-    }
     .bank-thir {
         font-size:22px;
     }
@@ -823,9 +831,7 @@ span.error-sec {
         max-width: none;
     }
     .exchanger__payment-header {
-
         flex-wrap: wrap;
-        margin-bottom: 20px;
     }
     .line-el:nth-child(3) .line-text *{
         text-align: end;
@@ -863,8 +869,32 @@ span.error-sec {
     }
 }
 @media (max-width: 640px) {
+    .exchanger-thir__out,
+    .exchanger-thir__in {
+        gap: 30px;
+    }
+    .exchanger__payment-header {
+        row-gap:15px;
+    }
+    .exchanger-sec__buttons {
+        flex-direction: column-reverse;
+    }
     .rewievs-list {
         grid-template-columns: 1fr;
         justify-items: center;
+    }
+
+    .exchanger-input::placeholder {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 105%;
+        color: #afb8cc;
+    }
+
+    .banner__title {
+        font-size: 34px;
+    }
+    .banner__image {
+        background-size: 80%;
     }
 }

@@ -16,19 +16,23 @@ const transactionInfo = {
     cryptoCurs:'',
 }
 
-document.addEventListener('click', function(event) {
-
-    if(event.target == document.querySelectorAll('.next-button')[1]) {
-        toThirStade();
-    }
-});
+document.querySelectorAll('.next-button')[0].addEventListener('click', toSecStade);
+document.querySelectorAll('.next-button')[1].addEventListener('click', toThirStade);
+document.querySelectorAll('.back-button')[0].addEventListener('click', toFirStade);
+document.querySelectorAll('.back-button')[1].addEventListener('click', toSecStade);
 
 function toFirStade() {
+    const cont = document.querySelector('.exchanger');
     cont.classList.remove('sec');
+    cont.classList.remove('thir');
     cont.classList.add('fir');
 }
 function toSecStade() {
 
+    const cont = document.querySelector('.exchanger');
+    cont.classList.remove('fir');
+    cont.classList.remove('thir');
+    cont.classList.add('sec');
 }
 
 function toThirStade() {
@@ -50,6 +54,7 @@ function toThirStade() {
 
             const cont = document.querySelector('.exchanger');
             cont.classList.remove('sec');
+            cont.classList.remove('fir');
             cont.classList.add('thir');
             fillThir();
     }
@@ -138,9 +143,14 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownList.addEventListener('click', function(event) {
             if (event.target.tagName === 'LI') {
                 dropdownBtn.innerHTML = `<span>${event.target.innerHTML}</span>`;
+                transactionInfo.bankImg = event.target.childNodes[1].getAttribute('src');
+                transactionInfo.bank = event.target.childNodes[3].textContent;
                 dropdownContent.classList.remove('show');
             } else if (event.target.tagName === 'SPAN' || event.target.tagName === 'IMG') {
                 dropdownBtn.innerHTML = `<span>${event.target.parentElement.innerHTML}</span>`;
+                transactionInfo.bankImg = event.target.parentElement.childNodes[1].getAttribute('src');
+                transactionInfo.bank = event.target.parentElement.childNodes[3].textContent;
+                dropdownContent.classList.remove('show');
             }
         });
 
