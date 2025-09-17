@@ -33,10 +33,15 @@
                 </ul>
                 <div class="header__end">
                     <div class="custom-lang-select">
-                        <select name="lang" class="lang-select">
-                            <option value="option1">Ru</option>
-                            <option value="option2">En</option>
-                        </select>
+                        <button class="lang-select">RU</button>
+                        <!-- <select name="lang" class="lang-select"> -->
+                            <!-- <option value="RU">RU</option>
+                            <option value="EN">EN</option> -->
+                        <div class="lang-options hide">
+                            <p>Выберите язык</p>
+                            <button data-value="RU">Русский</button>
+                            <button data-value="EN">English</button>
+                        </div>
                     </div>
                     <a class="login__button" href="/auth.html">вход</a>
                 </div>
@@ -84,11 +89,16 @@
             </ul>
             <div class="header__end">
                 <div class="custom-lang-select">
-                    <select name="lang" class="lang-select">
-                        <option value="option1">Ru</option>
-                        <option value="option2">En</option>
-                    </select>
-                </div>
+                        <button class="lang-select">RU</button>
+                        <!-- <select name="lang" class="lang-select"> -->
+                            <!-- <option value="RU">RU</option>
+                            <option value="EN">EN</option> -->
+                        <div class="lang-options hide">
+                            <p>Выберите язык</p>
+                            <button data-value="RU">Русский</button>
+                            <button data-value="EN">English</button>
+                        </div>
+                    </div>
                 <a class="login__button" href="/auth.html">вход</a>
             </div>
         </div>
@@ -322,11 +332,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="exchanger-values-down">
-                                    
-                                    
-                                    
-                                </div> -->
                                 </div>
                                 
                                 <div class="exchanger-down">
@@ -587,7 +592,6 @@
                 <div class="modal-body">
                     <div class="modal-img">
                     </div>
-                    
                     <div class="modal-content">
                         <img class="close" src="./assets/icons/close.svg">
                         <h3>Уведомление</h3>
@@ -635,6 +639,6 @@
     <script src="./scripts/menu.js"></script>
     <script src="./scripts/modal.js"></script>
     <script src="./scripts/exh.js"></script>
-    
+    <script src="./scripts/change-lang.js"></script>
 </body>
 </html>

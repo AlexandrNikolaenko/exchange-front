@@ -50,6 +50,7 @@ header {
     display: inline-block;
 }
 .lang-select {
+    border: none;
     font-size: 18px;
     text-transform: uppercase;
     color:var(--purple);
@@ -60,6 +61,9 @@ header {
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
 }
+.lang-select option {
+    appearance: none;
+}
 .custom-lang-select::after {
     content: url('../assets/icons/select-arrow-down.svg');
     width: 10px;
@@ -68,8 +72,7 @@ header {
     position: absolute;
     top: 16.5px;
     right: 20px;
-    transform: translateY(-125%);
-    /* transition: all .3s; */
+    transform: translateY(-100%);
     transform-origin: center;
 }
 .custom-lang-select:focus-within::after{
@@ -85,6 +88,34 @@ header {
     border: none;
     outline: 1px solid var(--light-purple);
     outline-offset: -2px;
+}
+.lang-options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transform: translateY(5%);
+    border-radius: 8px;
+    overflow: hidden;
+    filter: drop-shadow(-2px 4px 60px rgba(0, 0, 0, .3));
+    background-color: #ffffff;
+}
+.lang-options p {
+    font-family: 'InvolveSB';
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 800;
+    text-wrap: nowrap;
+}
+.lang-options.hide {
+    display: none;
+}
+.lang-options button {
+    text-align: start;
+    padding: 16px 30px;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
 }
 .burder {
     width: 38px;
