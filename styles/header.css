@@ -161,6 +161,28 @@ header {
 .fall-menu {
     display: none;
 }
+.support__button {
+    padding: 12px 10px;
+    width: min-content;
+    background: var(--lightpurple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'InvolveMed';
+    text-transform: capitalize;
+    border-radius: 8px;
+}
+.base-header-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.base-header-menu a {
+    text-wrap: nowrap;
+}
 
 @media (max-width:850px) {
     .header .container {
@@ -184,8 +206,9 @@ header {
     }
     .fall-menu {
         display: flex;
-        justify-content: space-around;
-        padding:50px 0;
+        flex-direction: column;
+        gap: 40px;
+        padding:50px 30px;
         box-shadow: 1px 0 20px #00000060;
         position: absolute;
         z-index: 90;
