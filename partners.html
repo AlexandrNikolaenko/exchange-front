@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./styles/whyChoucing.css">
 </head>
 <body>
-    <header class="header">
+     <header class="header">
         <div class="container">
             <div class="header__content">
                 <div class="header__first-cont">
@@ -29,13 +29,19 @@
                 </ul>
                 <div class="header__end">
                     <div class="custom-lang-select">
-                        <select name="lang" class="lang-select">
-                            <option value="option1">Ru</option>
-                            <option value="option2">En</option>
-                        </select>
+                        <button class="lang-select">RU</button>
+                        <!-- <select name="lang" class="lang-select"> -->
+                            <!-- <option value="RU">RU</option>
+                            <option value="EN">EN</option> -->
+                        <div class="lang-options hide">
+                            <p>Выберите язык</p>
+                            <button data-value="RU">Русский</button>
+                            <button data-value="EN">English</button>
+                        </div>
                     </div>
                     <a class="login__button" href="/auth.html">вход</a>
                 </div>
+                
             </div>
             <div class="header__mobile">
                 <div class="header__first-cont">
@@ -50,41 +56,43 @@
             
         </div>
         <div class="fall-menu">
-            <ul class="header__list">
-                <li><a href="/rules.html">Правила обмена</a></li>
-                <li><a href="/partners.html">Партнерам</a></li>
-                <li><a href="/news.html">Новости</a></li>
-                <li><a href="/faq.html">FAQ</a></li>
-                <li><a href="/contacts.html">Контакты</a></li>
-                <li class="support"><a href="#">Поддержка</a></li>
-                <li>
-                    <ul class="social">
-
-                    </ul>
-                </li>
-                <div class="social">
-                    <a href="#">
-                        <img src="./assets/icons/Ywitter.svg">
-                    </a>
-                    <a href="#">
-                        <img src="./assets/icons/icon-park-outline_telegram.svg">
-                    </a>
-                    <a href="#">
-                        <img src="./assets/icons/Facebook.svg">
-                    </a>
-                    <a href="#">
-                        <img src="./assets/icons/instagram.svg">
-                    </a>
+            <div class="base-header-menu">
+                <ul class="header__list">
+                    <li><a href="/rules.html">Правила обмена</a></li>
+                    <li><a href="/partners.html">Партнерам</a></li>
+                    <li><a href="/news.html">Новости</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                    <li><a href="/contacts.html">Контакты</a></li>
+                </ul>
+                <div class="header__end">
+                    <div class="custom-lang-select">
+                            <button class="lang-select">RU</button>
+                            <!-- <select name="lang" class="lang-select"> -->
+                                <!-- <option value="RU">RU</option>
+                                <option value="EN">EN</option> -->
+                            <div class="lang-options hide">
+                                <p>Выберите язык</p>
+                                <button data-value="RU">Русский</button>
+                                <button data-value="EN">English</button>
+                            </div>
+                        </div>
+                    <a class="login__button" href="/auth.html">вход</a>
                 </div>
-            </ul>
-            <div class="header__end">
-                <div class="custom-lang-select">
-                    <select name="lang" class="lang-select">
-                        <option value="option1">Ru</option>
-                        <option value="option2">En</option>
-                    </select>
-                </div>
-                <a class="login__button" href="/auth.html">вход</a>
+            </div>
+            <a class="support__button" href="#">Поддержка</a>
+            <div class="social">
+                <a href="#">
+                    <img src="./assets/icons/Ywitter.svg">
+                </a>
+                <a href="#">
+                    <img src="./assets/icons/icon-park-outline_telegram.svg">
+                </a>
+                <a href="#">
+                    <img src="./assets/icons/Facebook.svg">
+                </a>
+                <a href="#">
+                    <img src="./assets/icons/instagram.svg">
+                </a>
             </div>
         </div>
     </header>
@@ -201,5 +209,6 @@
         </div>
     </footer>
     <script src="./scripts/menu.js"></script>
+    <script src="./scripts/change-lang.js"></script>
 </body>
 </html>
