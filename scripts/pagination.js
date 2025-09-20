@@ -170,13 +170,14 @@ const renderPagination = (posts) => {
     });
     paginationDiv.appendChild(prevArrow);
 
-    for (let i = 1; i < pageCount; i++) {
+    for (let i = 1; i <= pageCount; i++) {
         const pageItem = document.createElement('span');
         const width = window.innerWidth;
 
         const startPage = document.createElement('span');
         startPage.textContent = '1...';
         startPage.classList.add('page-item');
+        console.log(currentPage);
 
         if(i - 2 < currentPage && i + 2 > currentPage) {
             pageItem.textContent = i;
@@ -190,7 +191,9 @@ const renderPagination = (posts) => {
             renderPage(currentPage, posts);
             renderPagination(posts);
         });
-        paginationDiv.appendChild(pageItem);
+        if (i - 2 < currentPage && i + 2 > currentPage) {
+            paginationDiv.appendChild(pageItem);
+        }
     }
 
     const nextArrow = document.createElement('span');
