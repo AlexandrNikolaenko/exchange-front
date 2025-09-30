@@ -1,3 +1,3 @@
 export default function NavLink() {
-  return <></>
+  return <></>;
 }

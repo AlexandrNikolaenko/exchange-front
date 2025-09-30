@@ -1,26 +1,114 @@
 @import "tailwindcss";
+@import "./layout.css";
+@import "./main.css";
+@import "./banner.css";
+@import "./why-we.css";
 
+@font-face {
+  font-family: 'InvolveBold';
+  src:
+    url(/fonts/Invole/Involve-Bold.ttf) format('truetype'),
+    url(/fonts/Invole/Involve-Bold.woff), format(woff);
+  font-weight: bold;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'InvolveReg';
+  src:
+    url(/fonts/Invole/Involve-Regular.woff), format(woff);
+  font-weight: bold;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'InvolveMed';
+  src:
+    url(/fonts/Invole/Involve-Medium.woff), format(woff);
+  font-weight: bold;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'InvolveSB';
+  src:
+    url(/fonts/Invole/Involve-SemiBold.woff), format(woff);
+  font-weight: bold;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'InvolveB';
+  src:
+    url(/fonts/Invole/Involve-Bold.woff), format(woff);
+  font-weight: bold;
+  font-display: swap;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "InvolveReg";
+}
+ul {
+  list-style: none;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1216px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+select {
+  border: none;
+}
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --purple: #1e0e62;
+  --lightpurple: #482be7;
+  --dark-blue: #1e0e62;
+  --gray: #575757;
+  --greenlight: #22c55e;
+  --darkgray: #374054;
+  --graylight: #697286;
+  --bluegray: #8896ab;
+  --purplelight: #5a40e9;
+  --active-gray: #f5f5f5;
+  --light-purple: #cdadff;
+}
+@media (max-width: 1250px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 850px) {
+  .container {
+    padding: 0 20px;
+  }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-purple: var(--purple);
+  --color-lightpurple: var(--lightpurple);
+  --color-dark-blue: var(--dark-blue);
+  --color-gray: var(--gray);
+  --color-greenlight: var(--greenlight);
+  --color-graylight: var(--graylight);
+  --color-bluegray: var(--bluegray);
+  --color-purplelight: var(--purplelight);
+  --color-active-gray: var(--active-gray);
+  --color-light-purple: var(--light-purple);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+
+

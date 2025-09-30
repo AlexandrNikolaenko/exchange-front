@@ -1,3 +1,3 @@
 export default function NextButton() {
-  return <></>
+  return <></>;
 }
