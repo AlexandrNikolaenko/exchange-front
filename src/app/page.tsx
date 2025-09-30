@@ -315,18 +315,18 @@ export default function Home() {
                </section> */}
       <div className="container">
         <WhyWeBlock />
-        <section className="rewievs">
-          <h3 className="rewievs-header">
+        <section className="reviews">
+          <h3 className="reviews-header">
             <span>Что&nbsp;</span>
             <span className="purple">о нас говорят?</span>
           </h3>
-          <ul className="rewievs-list">
+          <ul className="reviews-list">
             <Feedback />
             <Feedback />
             <Feedback />
             <Feedback />
           </ul>
-          <div className="all-rewiev-content">
+          <div className="all-review-content">
             <ShowAllLink />
           </div>
         </section>

@@ -1,5 +1,6 @@
 import { ContactsIcon } from "../core/icons/icon";
 import Logo from "../core/logo";
+import NavLink from "../core/links/nav-link";
 
 export default function Footer() {
   return (
@@ -9,11 +10,11 @@ export default function Footer() {
           <div className="footer-container">
             <Logo />
             <nav className="footer-nav">
-              <a href="./rules.html">Правила обмена</a>
-              <a href="./partners.html">Партнерам</a>
-              <a href="./news.html">Новости</a>
-              <a href="./faq.html">FAQ</a>
-              <a href="./contacts.html">Контакты</a>
+              <NavLink href={'/rules'}>Правила обмена</NavLink>
+              <NavLink href={'/partners'}>Партнерам</NavLink>
+              <NavLink href={'/news'}>Новости</NavLink>
+              <NavLink href={'/faq'}>FAQ</NavLink>
+              <NavLink href={'/contacts'}>Контакты</NavLink>
             </nav>
           </div>
           <div className="line"></div>

@@ -1,4 +1,4 @@
-.rewievs-header {
+.reviews-header {
   font-weight: 600;
   font-size: 52px;
   line-height: 105%;
@@ -7,10 +7,10 @@
   font-family: "InvolveSB";
   display: flex;
 }
-.rewievs {
+.reviews {
   padding-top: 100px;
 }
-.rewievs-item {
+.reviews-item {
   background: #f2f3f6;
   border-radius: 10px;
   display: flex;
@@ -21,7 +21,7 @@
   padding: 20px;
   min-height: 160px;
 }
-.rewievs-list {
+.reviews-list {
   margin-top: 92px;
   margin-bottom: 50px;
   display: flex;
@@ -29,7 +29,7 @@
   justify-content: space-between;
   gap: 20px;
 }
-.rewievs-item-header {
+.reviews-item-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,7 +40,7 @@
 .likes.active path {
   fill: #00e627;
 }
-.rewievs-item-body {
+.reviews-item-body {
   font-weight: 500;
   font-size: 14px;
   line-height: 140%;
@@ -48,14 +48,14 @@
   color: #697286;
   font-family: "InvolveMed";
 }
-.rewievs-name span {
+.reviews-name span {
   font-weight: 600;
   font-size: 16px;
   line-height: 105%;
   color: #374054;
   font-family: "InvolveMed";
 }
-.rewievs-name p {
+.reviews-name p {
   font-weight: 400;
   font-size: 12px;
   line-height: 105%;
@@ -714,12 +714,12 @@ span.error-sec {
   .exchanger-cont {
     gap: 10px;
   }
-  .rewievs-list {
+  .reviews-list {
     display: grid;
     grid-template-columns: repeat(2, 289px);
     justify-content: center;
   }
-  .rewievs-header {
+  .reviews-header {
     justify-content: center;
   }
   .exchanger-values-down {
@@ -752,15 +752,15 @@ span.error-sec {
   .exchanger-line {
     grid-template-columns: 1fr 1fr 0fr;
   }
-  .rewievs-header {
+  .reviews-header {
     font-size: 47px;
     margin: 0 auto;
     width: 200px;
   }
-  .rewievs-header .purple {
+  .reviews-header .purple {
     text-align: end;
   }
-  .rewievs-header span:nth-child(1) {
+  .reviews-header span:nth-child(1) {
     margin-right: -73px;
   }
 }
@@ -881,7 +881,7 @@ span.error-sec {
   .exchanger-sec__buttons {
     flex-direction: column-reverse;
   }
-  .rewievs-list {
+  .reviews-list {
     grid-template-columns: 1fr;
     justify-items: center;
   }

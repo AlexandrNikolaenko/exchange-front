@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function Feedback() {
   return (
-    <li className="rewievs-item">
-      <div className="rewievs-item-header">
+    <li className="reviews-item">
+      <div className="reviews-item-header">
         <Image alt="avatar" src={"/userAvatar.png"} width={54} height={54} />
-        <div className="rewievs-name">
+        <div className="reviews-name">
           <span>Олег Галов</span>
           <p>03.06.2024</p>
         </div>
@@ -36,7 +36,7 @@ export default function Feedback() {
           />
         </svg>
       </div>
-      <div className="rewievs-item-body">
+      <div className="reviews-item-body">
         <p>Обменял быстро, и курс приятный) спасибо!!</p>
       </div>
     </li>

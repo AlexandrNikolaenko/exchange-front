@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ContactsIcon } from "../core/icons/icon";
 import Logo from "../core/logo";
+import NavLink from "../core/links/nav-link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,23 +20,13 @@ export default function Header() {
             <Logo />
           </div>
 
-          <ul className="header__list">
-            <li>
-              <a href="./rules.html">Правила обмена</a>
-            </li>
-            <li>
-              <a href="./partners.html">Партнерам</a>
-            </li>
-            <li>
-              <a href="./news.html">Новости</a>
-            </li>
-            <li>
-              <a href="./faq.html">FAQ</a>
-            </li>
-            <li>
-              <a href="./contacts.html">Контакты</a>
-            </li>
-          </ul>
+          <nav className="header__list">
+            <NavLink href={'/rules'}>Правила обмена</NavLink>
+            <NavLink href={'/partners'}>Партнерам</NavLink>
+            <NavLink href={'/news'}>Новости</NavLink>
+            <NavLink href={'/faq'}>FAQ</NavLink>
+            <NavLink href={'/contacts'}>Контакты</NavLink>
+          </nav>
           <div className="header__end">
             <div className="custom-lang-select">
               <button className="lang-select">RU</button>
