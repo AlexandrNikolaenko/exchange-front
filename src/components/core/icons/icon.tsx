@@ -5,7 +5,7 @@ export default function Icon() {
 }
 
 export function AuthIcon({ src, alt }: { src: string; alt: string }) {
-return <Image alt={alt} src={src} width={42} height={42} />;
+  return <Image alt={alt} src={src} width={42} height={42} />;
 }
 
 export function ContactsIcon({ src, alt }: { src: string; alt: string }) {
