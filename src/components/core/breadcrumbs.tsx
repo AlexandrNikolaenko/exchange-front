@@ -9,7 +9,7 @@ type Page = {
 export default function Breadcrumbs({ pages }: { pages: Page[] }) {
   return (
     <div className="main__header">
-      <Link href="./index.html">Главная</Link>
+      <Link href="/">Главная</Link>
       {pages.map((page) => (
         <BreadCrumbsPoint key={page.name} page={page} />
       ))}
