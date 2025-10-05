@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import ShowAllLink from "@/components/core/links/show-all";
 import WhyWeBlock from "@/components/core/why-we-block";
@@ -7,11 +7,11 @@ import Notification from "@/components/core/notification";
 import { useState } from "react";
 
 export default function Home() {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    function handleChangeIsOpen() {
-        setIsOpen(!isOpen);
-    }
+  function handleChangeIsOpen() {
+    setIsOpen(!isOpen);
+  }
 
   return (
     <>
@@ -340,7 +340,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <Notification isOpen={isOpen} setIsOpen={handleChangeIsOpen}/>
+      <Notification isOpen={isOpen} setIsOpen={handleChangeIsOpen} />
     </>
   );
 }

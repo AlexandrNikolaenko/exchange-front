@@ -22,15 +22,9 @@ export default function Footer() {
             <span>© 2024 Azazex. Сервис обмена электорнных валют.</span>
             <div className="social">
               <ContactsIcon src="/icons/Twitter.svg" alt="twitter" />
-              <ContactsIcon
-                src="/icons/telegram.svg"
-                alt="telegram"
-              />
+              <ContactsIcon src="/icons/telegram.svg" alt="telegram" />
               <ContactsIcon src="/icons/Facebook.svg" alt="Facebook" />
-              <ContactsIcon
-                src="/icons/instagram.svg"
-                alt="instagram"
-              />
+              <ContactsIcon src="/icons/instagram.svg" alt="instagram" />
             </div>
           </div>
         </div>

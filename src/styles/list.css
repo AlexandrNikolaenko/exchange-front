@@ -1,96 +1,95 @@
 .list-header {
-    display: flex;
-    justify-content: space-between;
-    font-size:20px;
-    font-weight: 'InvolveMed';
-    align-items: center;
-    border:none;
-    background: #FAF9FF;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: "InvolveMed";
+  align-items: center;
+  border: none;
+  background: #faf9ff;
 }
 .list-header.active {
-    background:#F5F5F5;
+  background: #f5f5f5;
 }
 .list-header.active .list-arrow {
-    fill:#482BE7;
-    transform: rotate(180deg);
+  fill: #482be7;
+  transform: rotate(180deg);
 }
 .list-header.active svg.list-arrow path {
-    fill: #fff !important;
+  fill: #fff !important;
 }
 ol {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 *::marker {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 .list-arrow {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .list-arrow.active {
-    transform: rotate(180deg);
-    fill: #482BE7;
+  transform: rotate(180deg);
+  fill: #482be7;
 }
 .list-arrow.active path {
-    fill:#fff;
+  fill: #fff;
 }
 .info-list {
-    display: flex;
-    flex-direction: column;
-    gap:30px;
-    padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 50px;
 }
 .info-list p {
-    color: #697286;
+  color: #697286;
 }
 li.info-list-item {
-    color:#2A3342;
-    list-style: none;
-    border-radius: 10px;
-    overflow: hidden;
-    border: none;
-    background: #FAF9FF;
+  color: #2a3342;
+  list-style: none;
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+  background: #faf9ff;
 }
 li.info-list-item.active {
-    background: #F5F5F5;
-    border: 1px solid #E3E4E5;
+  background: #f5f5f5;
+  border: 1px solid #e3e4e5;
 }
 .list-header {
-    padding: 15px 38px;
-    border-radius: 10px;
+  padding: 15px 38px;
+  border-radius: 10px;
 
-    position: relative;
-    z-index: 20;
+  position: relative;
+  z-index: 20;
 }
 
 .list-header.active {
-    border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 .info-list-sub {
-    padding: 15px 38px;
-    background: #F5F5F5;
-    position: relative;
-    z-index: 10;
-    transition: all 0.5s;
+  padding: 15px 38px;
+  background: #f5f5f5;
+  position: relative;
+  z-index: 10;
+  transition: all 0.5s;
 }
 
 .info-list-sub {
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-   
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 section.info-list-sec {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 .info-list-sub li {
-    transition: all 0.5s;
+  transition: all 0.5s;
 }
 .info-list-sub.hide {
-    height: 0;
-    padding: 0 38px;
-    margin: 0;
+  height: 0;
+  padding: 0 38px;
+  margin: 0;
 }
