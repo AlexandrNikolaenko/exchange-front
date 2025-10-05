@@ -80,7 +80,7 @@ export default function Page() {
           </p>
           <span>
             Уже есть аккаунт?{" "}
-            <a className="form-link-main" href="/auth/login">
+            <a className="form-link-main" href="/auth/signin">
               Войти
             </a>
           </span>
