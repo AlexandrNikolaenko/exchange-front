@@ -22,7 +22,7 @@ export default function Header() {
           </div>
 
           <nav className="header__list">
-            <NavLink href={"/rules"}>Обмен</NavLink>
+            <NavLink href={"/"}>Обмен</NavLink>
             <NavLink href={"/rules"}>Правила обмена</NavLink>
             <NavLink href={"/partners"}>Партнерам</NavLink>
             <NavLink href={"/news"}>Новости</NavLink>
@@ -59,6 +59,9 @@ export default function Header() {
       <div className="fall-menu">
         <div className="base-header-menu">
           <ul className="header__list">
+            <li>
+              <Link href="/">Обмен</Link>
+            </li>
             <li>
               <Link href="/rules">Правила обмена</Link>
             </li>
