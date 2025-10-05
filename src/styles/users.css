@@ -1,0 +1,94 @@
+.user-info {
+  background-color: #edeef1;
+}
+p {
+  line-height: 26px;
+}
+.user-list li {
+  display: flex;
+  flex-direction: column;
+  max-width: 289px;
+}
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(289px, 1fr));
+  justify-content: space-between;
+  gap: 10%;
+  justify-items: center;
+}
+.user-item-number {
+  background: var(--lightpurple);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  font-family: "InvolveSB";
+}
+.user-item-header {
+  color: var(--darkgray);
+  font-size: 22px;
+  font-family: "InvolveSB";
+  margin: 16px 0 5px;
+}
+.user-list li p {
+  color: #697286;
+  font-size: 16px;
+}
+.user-list {
+  margin-top: 60px;
+}
+.user-info-header {
+  font-size: 45px;
+  text-align: center;
+  font-family: "InvolveSB";
+  text-transform: uppercase;
+  padding-top: 100px;
+}
+.user-info__down-cont {
+  background: var(--lightpurple);
+  color: #fff;
+  width: 100%;
+  padding: 60px 20px;
+  margin-top: 81px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.user-info__down-cont p {
+  max-width: 1138px;
+}
+.user-info-links {
+  display: flex;
+  width: 100%;
+  max-width: 1138px;
+  justify-content: start;
+  margin-top: 10px;
+}
+.user-info-links p {
+  font-family: "InvolveB";
+}
+.user-info__down-cont {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1439x) {
+  .user-info-header {
+    font-size: 47px;
+  }
+}
+
+@media (max-width: 682px) {
+  .user-list {
+    height: 528px;
+  }
+}
+@media (max-width: 767px) {
+  .user-info-header {
+    font-size: 35px;
+  }
+}
