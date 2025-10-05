@@ -49,14 +49,14 @@ export default function Header() {
           </div>
           <button onClick={handleVisibleMenu}>
             <ul className="burger">
-              <li></li>
-              <li></li>
-              <li></li>
+              <li style={{transform: isOpen ? 'translateY(9px) rotate(-45deg)': 'translateY(0px) rotate(0deg)'}}></li>
+              <li style={{width: isOpen ? '0' : '100%'}}></li>
+              <li style={{transform: isOpen ? 'translateY(-9px) rotate(45deg)' : 'translateY(0px) rotate(0deg'}}></li>
             </ul>
           </button>
         </div>
       </div>
-      <div className="fall-menu">
+      <div className="fall-menu" style={{transform: isOpen ? 'translateY(0%)' : 'translateY(-130%)'}}>
         <div className="base-header-menu">
           <ul className="header__list">
             <li>
@@ -102,7 +102,7 @@ export default function Header() {
           <a href="#">
             <ContactsIcon
               alt="telegram"
-              src="/icons/icon-park-outline_telegram.svg"
+              src="/icons/telegram.svg"
             />
           </a>
           <a href="#">
