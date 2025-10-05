@@ -7,6 +7,7 @@
 @import "./avtors.css";
 @import "./news.css";
 @import "./newInner.css";
+@import "./contacts.css";
 
 @font-face {
   font-family: "InvolveBold";
