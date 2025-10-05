@@ -5,6 +5,8 @@
 @import "./why-we.css";
 @import "./newsBlock.css";
 @import "./avtors.css";
+@import "./news.css";
+@import "./newInner.css";
 
 @font-face {
   font-family: 'InvolveBold';

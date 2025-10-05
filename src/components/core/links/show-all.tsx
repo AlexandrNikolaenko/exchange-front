@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ShowAllLink() {
+export default function ShowAllLink({link='#', text='Все отзывы'}: {link?: string, text?: string}) {
   return (
-    <Link href={"#"} className="all-review">
-      Все отзывы
+    <Link href={link} className="all-review">
+      {text}
       <Image
         width={47}
         height={4.39}

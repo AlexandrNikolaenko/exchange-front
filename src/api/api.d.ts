@@ -4,4 +4,5 @@ export interface New {
   author: string,
   image: string,
   body: string,
+  date: string,
 }

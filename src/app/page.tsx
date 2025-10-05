@@ -1,7 +1,6 @@
 import ShowAllLink from "@/components/core/links/show-all";
 import WhyWeBlock from "@/components/core/why-we-block";
 import Feedback from "@/components/main/feedback";
-import Image from "next/image";
 
 export default function Home() {
   return (
