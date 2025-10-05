@@ -10,6 +10,8 @@
 @import "./newInner.css";
 @import "./contacts.css";
 @import "./modal.css";
+@import "./list.css";
+@import "./rules.css";
 
 @font-face {
   font-family: "InvolveBold";
@@ -67,6 +69,10 @@ a {
   max-width: 1216px;
   margin: 0 auto;
   width: 100%;
+}
+
+button {
+  cursor: pointer;
 }
 
 select {
