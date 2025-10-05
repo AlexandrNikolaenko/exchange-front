@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ContactsIcon } from "../core/icons/icon";
 import Logo from "../core/logo";
 import NavLink from "../core/links/nav-link";
+import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +38,7 @@ export default function Header() {
                 <button data-value="EN">English</button>
               </div>
             </div>
-            <a className="login__button" href="./auth.html">
+            <a className="login__button" href="/auth/signin">
               вход
             </a>
           </div>
@@ -59,19 +60,19 @@ export default function Header() {
         <div className="base-header-menu">
           <ul className="header__list">
             <li>
-              <a href="./rules.html">Правила обмена</a>
+              <Link href="/rules">Правила обмена</Link>
             </li>
             <li>
-              <a href="./partners.html">Партнерам</a>
+              <Link href="/partners">Партнерам</Link>
             </li>
             <li>
-              <a href="./news.html">Новости</a>
+              <Link href="/news">Новости</Link>
             </li>
             <li>
-              <a href="./faq.html">FAQ</a>
+              <Link href="/faq">FAQ</Link>
             </li>
             <li>
-              <a href="./contacts.html">Контакты</a>
+              <Link href="/contacts">Контакты</Link>
             </li>
           </ul>
           <div className="header__end">
@@ -83,7 +84,7 @@ export default function Header() {
                 <button data-value="EN">English</button>
               </div>
             </div>
-            <a className="login__button" href="./auth.html">
+            <a className="login__button" href="/auth/signin">
               вход
             </a>
           </div>
@@ -93,19 +94,19 @@ export default function Header() {
         </a>
         <div className="social">
           <a href="#">
-            <ContactsIcon alt="twitter" src="./assets/icons/Twitter.svg" />
+            <ContactsIcon alt="twitter" src="/icons/Twitter.svg" />
           </a>
           <a href="#">
             <ContactsIcon
               alt="telegram"
-              src="./assets/icons/icon-park-outline_telegram.svg"
+              src="/icons/icon-park-outline_telegram.svg"
             />
           </a>
           <a href="#">
-            <ContactsIcon alt="facebook" src="./assets/icons/Facebook.svg" />
+            <ContactsIcon alt="facebook" src="/icons/Facebook.svg" />
           </a>
           <a href="#">
-            <ContactsIcon alt="instagram" src="./assets/icons/instagram.svg" />
+            <ContactsIcon alt="instagram" src="/icons/instagram.svg" />
           </a>
         </div>
       </div>
