@@ -19,7 +19,7 @@ export default function Page() {
               рекламный материал на Ваших сайтах, и получайте проценты с
               обменных операций приведённых пользователей.
             </p>
-            <a className="news-block-item-button" href="./users.html">
+            <a className="news-block-item-button" href="/partners/users">
               Подробнее
             </a>
           </li>
@@ -30,7 +30,7 @@ export default function Page() {
               развивать взаимовыгодные и перспективные отношения, которые
               позволят Вам и нам увеличить доход.
             </p>
-            <a className="news-block-item-button" href="./monitoring.html">
+            <a className="news-block-item-button" href="/partners/monitorings">
               Присоединиться
             </a>
           </li>
