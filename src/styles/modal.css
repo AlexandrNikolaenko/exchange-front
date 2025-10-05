@@ -1,0 +1,95 @@
+.modal-up {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    display: none;
+    z-index: 1000;
+}
+.modal-up.open-modal {
+    display: block;
+}
+.overlay {
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: #00000070;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.modal-body {
+    width:480px;
+    background: #fff;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.5s ease;
+    transform: translateY(-200%);
+}
+.modal-body.open-modal{
+    transform: translateY(0%);
+}
+.modal-img {
+    background-image: url('/modal.jpg');
+    max-height: 187px;
+    max-width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 187px;
+}
+.sec .modal-img {
+    background-image: url('/backgrounds/modal.png');
+}
+.modal-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    font-size:13px;
+    color:#5B587C;
+    padding:23px 50px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;   
+}
+
+.modal-content p {
+    line-height: 112.99999999999999%;
+}
+.modal__container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: auto;
+    height: 100vh;
+}
+.modal__container::-webkit-scrollbar {
+    display: none;
+}
+.close {
+    position: absolute;
+    right: 20px;
+    top:20px;
+    cursor: pointer;
+}
+.modal-content h3 {
+    text-align: center;
+    color:#170F49;
+    font-size:24px;
+    font-weight: bold;
+}
+.modal-content button {
+    max-width: 335px;
+    width: 100%;
+    background: #482BE7;
+    padding: 16px 0px;
+    border:none;
+    color:#fff;
+    font-family: 'InvolveMed';
+    border-radius: 10px;
+}
+.sec .close {
+    display: none;
+}
