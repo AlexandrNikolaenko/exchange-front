@@ -10,11 +10,11 @@ export default function Footer() {
           <div className="footer-container">
             <Logo />
             <nav className="footer-nav">
-              <NavLink href={'/rules'}>Правила обмена</NavLink>
-              <NavLink href={'/partners'}>Партнерам</NavLink>
-              <NavLink href={'/news'}>Новости</NavLink>
-              <NavLink href={'/faq'}>FAQ</NavLink>
-              <NavLink href={'/contacts'}>Контакты</NavLink>
+              <NavLink href={"/rules"}>Правила обмена</NavLink>
+              <NavLink href={"/partners"}>Партнерам</NavLink>
+              <NavLink href={"/news"}>Новости</NavLink>
+              <NavLink href={"/faq"}>FAQ</NavLink>
+              <NavLink href={"/contacts"}>Контакты</NavLink>
             </nav>
           </div>
           <div className="line"></div>

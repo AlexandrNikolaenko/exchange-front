@@ -21,11 +21,11 @@ export default function Header() {
           </div>
 
           <nav className="header__list">
-            <NavLink href={'/rules'}>Правила обмена</NavLink>
-            <NavLink href={'/partners'}>Партнерам</NavLink>
-            <NavLink href={'/news'}>Новости</NavLink>
-            <NavLink href={'/faq'}>FAQ</NavLink>
-            <NavLink href={'/contacts'}>Контакты</NavLink>
+            <NavLink href={"/rules"}>Правила обмена</NavLink>
+            <NavLink href={"/partners"}>Партнерам</NavLink>
+            <NavLink href={"/news"}>Новости</NavLink>
+            <NavLink href={"/faq"}>FAQ</NavLink>
+            <NavLink href={"/contacts"}>Контакты</NavLink>
           </nav>
           <div className="header__end">
             <div className="custom-lang-select">

@@ -4,24 +4,24 @@ import Link from "next/link";
 type Page = {
   name: string;
   href: string;
-}
+};
 
-export default function Breadcrumbs({pages}: {pages: Page[]}) {
+export default function Breadcrumbs({ pages }: { pages: Page[] }) {
   return (
     <div className="main__header">
       <Link href="./index.html">Главная</Link>
-      {
-        pages.map((page) => <BreadCrumbsPoint key={page.name} page={page}/>)
-      }
+      {pages.map((page) => (
+        <BreadCrumbsPoint key={page.name} page={page} />
+      ))}
     </div>
   );
 }
 
-function BreadCrumbsPoint({page}: {page: Page}) {
+function BreadCrumbsPoint({ page }: { page: Page }) {
   return (
     <>
-      <Image alt="arrow" width={7.79} height={13.36} src="/icons/arrow.svg"/>
+      <Image alt="arrow" width={7.79} height={13.36} src="/icons/arrow.svg" />
       <Link href={page.href}>{page.name}</Link>
     </>
-  )
+  );
 }
