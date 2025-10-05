@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ShowAllLink from "./links/show-all";
 
 export default function NewBlock() {

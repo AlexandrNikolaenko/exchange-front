@@ -21,6 +21,7 @@ export default function Header() {
           </div>
 
           <nav className="header__list">
+            <NavLink href={"/rules"}>Обмен</NavLink>
             <NavLink href={"/rules"}>Правила обмена</NavLink>
             <NavLink href={"/partners"}>Партнерам</NavLink>
             <NavLink href={"/news"}>Новости</NavLink>

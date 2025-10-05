@@ -21,14 +21,14 @@ export default function Footer() {
           <div className="footer-container">
             <span>© 2024 Azazex. Сервис обмена электорнных валют.</span>
             <div className="social">
-              <ContactsIcon src="./assets/icons/Ywitter.svg" alt="twitter" />
+              <ContactsIcon src="/icons/Twitter.svg" alt="twitter" />
               <ContactsIcon
-                src="./assets/icons/icon-park-outline_telegram.svg"
+                src="/icons/telegram.svg"
                 alt="telegram"
               />
-              <ContactsIcon src="./assets/icons/Facebook.svg" alt="Facebook" />
+              <ContactsIcon src="/icons/Facebook.svg" alt="Facebook" />
               <ContactsIcon
-                src="./assets/icons/instagram.svg"
+                src="/icons/instagram.svg"
                 alt="instagram"
               />
             </div>

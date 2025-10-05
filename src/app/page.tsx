@@ -1,8 +1,18 @@
+'use client'
+
 import ShowAllLink from "@/components/core/links/show-all";
 import WhyWeBlock from "@/components/core/why-we-block";
 import Feedback from "@/components/main/feedback";
+import Notification from "@/components/core/notification";
+import { useState } from "react";
 
 export default function Home() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    function handleChangeIsOpen() {
+        setIsOpen(!isOpen);
+    }
+
   return (
     <>
       <div className="container">
@@ -330,6 +340,7 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <Notification isOpen={isOpen} setIsOpen={handleChangeIsOpen}/>
     </>
   );
 }

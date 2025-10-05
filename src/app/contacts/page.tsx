@@ -1,5 +1,4 @@
-import WhyWeBlock from "@/components/core/why-we-block";
-import Image from "next/image";
+import { ContactsIcon } from "@/components/core/icons/icon";
 
 export default function Page() {
   return (
@@ -18,18 +17,10 @@ export default function Page() {
                         <div className="news-block__list-down">
                             <a href="#" className="news-block-item-button">Написать на почту</a>
                             <div className="social">
-                                <a href="#">
-                                    <Image width={24} height={24} alt="twitter" src="/icons/Twitter.svg" />
-                                </a>
-                                <a href="#">
-                                    <Image width={24} height={24} alt="telegram" src="/icons/telegram.svg" />
-                                </a>
-                                <a href="#">
-                                    <Image width={24} height={24} alt="facebook" src="/icons/Facebook.svg" />
-                                </a>
-                                <a href="#">
-                                    <Image width={24} height={24} alt="instagram" src="/icons/instagram.svg" />
-                                </a>
+                                <ContactsIcon src="/icons/Twitter.svg" alt="twitter" />
+                                <ContactsIcon src="/icons/telegram.svg" alt="telegram" />
+                                <ContactsIcon src="/icons/Facebook.svg" alt="facebook" />
+                                <ContactsIcon src="/icons/instagram.svg" alt="instagram" />
                             </div>
                         </div>
                     </li>
@@ -106,7 +97,6 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            <WhyWeBlock />
             <div className="line"></div>
         </div>
     </>
