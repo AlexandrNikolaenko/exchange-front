@@ -107,7 +107,7 @@ export default function Header() {
           </ul>
           <div className="header__end">
             <div className="custom-lang-select">
-              <button className="lang-select">{lang}</button>
+              <button className="lang-select" onClick={handleChangeVisibleLang}>{lang}</button>
               <div className={`lang-options ${isVisibleLang ? '' : 'hide'}`}>
                 <p>Выберите язык</p>
                 <button data-value="RU" onClick={() => {

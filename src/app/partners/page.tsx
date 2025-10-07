@@ -1,6 +1,4 @@
 import Breadcrumbs from "@/components/core/breadcrumbs";
-import NewBlock from "@/components/core/news-block";
-import WhyWeBlock from "@/components/core/why-we-block";
 
 export default function Page() {
   return (
