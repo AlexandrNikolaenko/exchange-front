@@ -5,12 +5,27 @@ import WhyWeBlock from "@/components/core/why-we-block";
 import Feedback from "@/components/main/feedback";
 import Notification from "@/components/core/notification";
 import { useState } from "react";
+import Image from "next/image";
+import NextButton from "@/components/core/buttons/next-button";
+import BackButton from "@/components/core/buttons/back-button";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [exchangeSection, setExchangeSection] = useState<'fir' | 'sec' | 'thir'>('fir')
 
   function handleChangeIsOpen() {
     setIsOpen(!isOpen);
+  }
+
+  function handleNextExchangeSection() {
+    if (exchangeSection == 'fir') setExchangeSection('sec');
+    else if (exchangeSection == 'sec') setExchangeSection('thir');
+    else setExchangeSection('thir');
+  }
+
+  function handleBackExchangeSection() {
+    if (exchangeSection == 'sec') setExchangeSection('fir');
+    else if (exchangeSection == 'thir') setExchangeSection('sec');
   }
 
   return (
@@ -26,12 +41,12 @@ export default function Home() {
           <div className="banner__image index"></div>
         </div>
       </div>
-      {/* <section className="exchanger fir">
+      <section className={`exchanger ${exchangeSection}`}>
                 <div className="container">
                         <div className="exchanger-body">
                         <div className="exchanger-header">
                             <div className="exchanger-sub">
-                                <img src="./assets/icons/exhi.svg">
+                                <Image alt="exchange" width={31} height={31} src="icons/exhi.svg" />
                             </div>
                             <div className="exchanger-line">
                                 <div className="line-el active">
@@ -83,7 +98,7 @@ export default function Home() {
                                     <div className="exchanger-out">
                                         <h4>Вы отправляете</h4>
                                         <div className="fiat">
-                                            <input className="exchanger-input" placeholder="1000">
+                                            <input className="exchanger-input" placeholder="1000" />
                                             <span>RUB</span>
                                         </div>
                                         <div className="dropdown">
@@ -96,46 +111,44 @@ export default function Home() {
                                                     <button data-filter="Тинькофф">Тинькофф</button>
                                                 </div>
                                                 <div className="dropdown-search-container">
-                                                    <input type="text" className="dropdown-search" placeholder="Search...">
+                                                    <input type="text" className="dropdown-search" placeholder="Search..." />
                                                     <i className="fas fa-search dropdown-search-icon"></i>
                                                 </div>
                                                 
                                                 <ul className="dropdown-list" id="bank">
                                                     <li>
-                                                        <img src="./assets/icons/sber.svg">
+                                                        <Image alt="sber" width={18} height={18} src="/icons/sber.svg" />
                                                         <span>Сбербанк</span>
                                                     </li>
                                                     <li>
-                                                        <img src="./assets/icons/sber.svg">
+                                                        <Image alt="sber" width={18} height={18} src="/icons/sber.svg" />
                                                         <span>Сбербанк</span>
                                                     </li>
                                                     <li>
-                                                        <img src="./assets/icons/sber.svg">
+                                                        <Image alt="sber" width={18} height={18} src="/icons/sber.svg" />
                                                         <span>Сбербанк</span>
                                                     </li>
                                                     <li>
-                                                        <img src="./assets/icons/sber.svg">
+                                                        <Image alt="sber" width={18} height={18} src="/icons/sber.svg" />
                                                         <span>Сбербанк</span>
                                                     </li>
                                                     <li>
-                                                        <img src="./assets/icons/sber.svg">
+                                                        <Image alt="sber" width={18} height={18} src="/icons/sber.svg" />
                                                         <span>Сбербанк</span>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
-        
-                                        
                                     </div>
                                     <div className="exchanger-mix">
                                         <button className="exchanger-mix-button">
-                                            <img src="./assets/icons/arrows.svg">
+                                            <Image width={38.400001525878906} height={38.400001525878906} alt="exchange" src="/icons/arrows.svg" />
                                         </button>
                                     </div>
                                     <div className="exchanger-in">
                                         <h4>Вы получаете</h4>
                                         <div className="fiat">
-                                            <input className="exchanger-input" placeholder="1000">
+                                            <input className="exchanger-input" placeholder="1000" />
                                             <span>BTC</span>
                                         </div>
                                         <div className="bank">
@@ -153,12 +166,12 @@ export default function Home() {
                                                         <button data-filter="RUB">RUB</button>
                                                     </div>
                                                     <div className="dropdown-search-container">
-                                                        <input type="text" className="dropdown-search" placeholder="Search...">
+                                                        <input type="text" className="dropdown-search" placeholder="Search..." />
                                                         <i className="fas fa-search dropdown-search-icon"></i>
                                                     </div>
                                                     <ul className="dropdown-list" id="crypto">
                                                         <li>
-                                                            <img src="./assets/icons/bitcoin-icon.svg">
+                                                            <Image alt="btc" width={18} height={18} src="/icons/bitcoin-icon.svg" />
                                                             <span>Bitcoin</span>
                                                         </li>
                                                     </ul>
@@ -171,14 +184,14 @@ export default function Home() {
                             <div className="exchanger-info">
                                 <div className="exchanger-left-cont">
                                     <div className="curs info">
-                                        <img src="./assets/icons/Frame 172.svg">
+                                        <Image alt="course" width={34} height={34} src="/icons/course-icon.svg" />
                                         <div>
                                             <span>Курс обмена:</span>
                                             <p> 7114613 rub = 1 btc</p>
                                         </div>
                                     </div>
                                     <div className="exchanger-minmax info">
-                                        <img src="./assets/icons/Frame 172 (1).svg">
+                                        <Image alt="exchange" width={34} height={34} src="/icons/diapason-icon.svg" />
                                         <div className="minmax">
                                             <div>
                                                 <span>Min:</span>
@@ -193,7 +206,7 @@ export default function Home() {
                                 </div>
                                 <div className="exchanger-right-cont">
                                     <div className="sale info">
-                                        <img src="./assets/icons/sale.svg">
+                                        <Image alt="sale" width={34} height={34} src="/icons/sale.svg" />
                                         <div>
                                             <span>Скидка:</span>
                                             <p>0%</p>
@@ -204,36 +217,33 @@ export default function Home() {
                             <div className="exchanger-down">
                                 <div className="exchanger-work">
                                     <span>Работаем</span>
-                                    <img src="./assets/icons/Frame 11.svg">
+                                    <Image alt="24hours" width={33} height={33} src="/icons/24hours.svg" />
                                 </div>
-                                    <button className="next-button">
-                                        <span>Далее</span>
-                                        <img src="./assets/icons/Union2.svg">
-                                    </button>
+                                <NextButton action={handleNextExchangeSection} />
                             </div>
                         </div>
                         <div className="exchanger-second">
                             <div className="exchanger-main">
                                 <h4>Введите данные перевода</h4>
                                 <div className="exchanger-sec-body">
-                                    <input className="exchanger-input" id="email" placeholder="E-mail">
+                                    <input className="exchanger-input" id="email" placeholder="E-mail" />
                                 <div className="exchanger-values">
                                     <div className="exchanger-values__left-cont">
                                         <div className="fiat">
-                                            <input className="exchanger-input" id="sumSec" placeholder="1000">
+                                            <input className="exchanger-input" id="sumSec" placeholder="1000" />
                                             <span>RUB</span>
                                         </div>
-                                        <input className="exchanger-input" id="name" placeholder="ФИО отправителя">
-                                        <input className="exchanger-input" id="card" placeholder="Карта Сбербанка, от16 до 18 цифр">
+                                        <input className="exchanger-input" id="name" placeholder="ФИО отправителя" />
+                                        <input className="exchanger-input" id="card" placeholder="Карта Сбербанка, от16 до 18 цифр" />
                                     </div>
                                     <div className="exchanger-values__right-cont">
                                         <div className="fiat">
-                                            <input className="exchanger-input" id="cryptoSec" placeholder="1000">
+                                            <input className="exchanger-input" id="cryptoSec" placeholder="1000" />
                                             <span>RUB</span>
                                         </div>
-                                        <input className="exchanger-input" id="cryptoCard" placeholder="Bitcoin кошелёк от 28 до 100 цифр">
+                                        <input className="exchanger-input" id="cryptoCard" placeholder="Bitcoin кошелёк от 28 до 100 цифр" />
                                         <div className="curs info">
-                                            <img src="./assets/icons/Frame 172.svg">
+                                            <Image alt="course" width={34} height={34} src="/icons/course-icon.svg" />
                                             <div>
                                                 <span>Курс обмена:</span>
                                                 <p> 7114613 rub = 1 btc</p>
@@ -245,26 +255,27 @@ export default function Home() {
                                 
                                 <div className="exchanger-down">
                                     <label className="radio-button">
-                                        <input type="radio" className="rel-radio">
+                                        <input type="radio" className="rel-radio" />
                                         <span className="radio-cus"></span>
                                         Я согласен с правилами обмена и политикой AML
                                     </label>
                                     <div className="exchanger-sec__buttons">
-                                        <button className="back-button">
+                                        {/* <button className="back-button">
                                             <svg width="46" height="8" viewBox="0 0 46 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M43.1328 3.09501L42.782 2.72901L40.9028 0.814662C40.2756 0.175707 39.1892 0.619808 39.1892 1.51517L39.1892 2.09502C39.1892 2.6473 38.7414 3.09501 38.1892 3.09501H1.3418C0.789511 3.09501 0.341797 3.54272 0.341797 4.09501V6.48696C0.341797 7.03924 0.789512 7.48696 1.3418 7.48696L39.1891 7.48696L44.9984 7.48696C45.8791 7.48696 46.3297 6.4309 45.7204 5.79506L43.1328 3.09501Z" fill="white"/>
                                                 </svg>
                                                 
                                             <span>Назад</span>
-                                        </button>
-
-                                        <button className="next-button">
+                                        </button> */}
+                                        <BackButton text="Назад" action={handleBackExchangeSection}/>
+                                        <NextButton action={handleNextExchangeSection} />
+                                        {/* <button className="next-button">
                                             <span>Далее</span>
                                             <svg width="46" height="8" viewBox="0 0 46 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M43.1328 3.09501L42.782 2.72901L40.9028 0.814662C40.2756 0.175707 39.1892 0.619808 39.1892 1.51517L39.1892 2.09502C39.1892 2.6473 38.7414 3.09501 38.1892 3.09501H1.3418C0.789511 3.09501 0.341797 3.54272 0.341797 4.09501V6.48696C0.341797 7.03924 0.789512 7.48696 1.3418 7.48696L39.1891 7.48696L44.9984 7.48696C45.8791 7.48696 46.3297 6.4309 45.7204 5.79506L43.1328 3.09501Z" fill="white"/>
                                                 </svg>
                                                 
-                                        </button>
+                                        </button> */}
                                     </div>
                                 </div>
                                 <span className="error-sec"></span>
@@ -277,7 +288,7 @@ export default function Home() {
                                         <span className="sum" id="sumThir">1000</span>
                                         <span className="coin" id="fiatThir">RUB</span>
                                         <div className="bank-thir" id="bankThir">
-                                            <img src="./assets/icons/sber.svg">
+                                            <Image alt="sber" width={18} height={18} src="/icons/sber.svg" />
                                             <span>Сбербанк</span>
                                         </div>
                                     </div>
@@ -292,7 +303,7 @@ export default function Home() {
                                         <span className="sum" id="cryptoThir">1000</span>
                                         <span className="coin" id="cryptoShort">RUB</span>
                                         <div className="bank-thir " id="cryptoName">
-                                            <img src="./assets/icons/sber.svg">
+                                            <Image alt="sber" width={18} height={18} src="/icons/sber.svg" />
                                             <span>Сбербанк</span>
                                         </div>
                                     </div>
@@ -302,26 +313,28 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="exchanger-sec__buttons">
-                                <button className="back-button">
+                                {/* <button className="back-button">
                                     <svg width="46" height="8" viewBox="0 0 46 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M43.1328 3.09501L42.782 2.72901L40.9028 0.814662C40.2756 0.175707 39.1892 0.619808 39.1892 1.51517L39.1892 2.09502C39.1892 2.6473 38.7414 3.09501 38.1892 3.09501H1.3418C0.789511 3.09501 0.341797 3.54272 0.341797 4.09501V6.48696C0.341797 7.03924 0.789512 7.48696 1.3418 7.48696L39.1891 7.48696L44.9984 7.48696C45.8791 7.48696 46.3297 6.4309 45.7204 5.79506L43.1328 3.09501Z" fill="white"/>
                                         </svg>
                                         
                                     <span>Отмена</span>
-                                </button>
-
-                                <button className="next-button">
+                                </button> */}
+                                <BackButton text="Отмена" action={handleBackExchangeSection}/>
+                                
+                                <NextButton action={handleNextExchangeSection} />
+                                {/* <button className="next-button">
                                     <span>Далее</span>
                                     <svg width="46" height="8" viewBox="0 0 46 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M43.1328 3.09501L42.782 2.72901L40.9028 0.814662C40.2756 0.175707 39.1892 0.619808 39.1892 1.51517L39.1892 2.09502C39.1892 2.6473 38.7414 3.09501 38.1892 3.09501H1.3418C0.789511 3.09501 0.341797 3.54272 0.341797 4.09501V6.48696C0.341797 7.03924 0.789512 7.48696 1.3418 7.48696L39.1891 7.48696L44.9984 7.48696C45.8791 7.48696 46.3297 6.4309 45.7204 5.79506L43.1328 3.09501Z" fill="white"/>
                                         </svg>
                                         
-                                </button>
+                                </button> */}
                             </div>
                         </div>
                     </div>
                 </div>
-               </section> */}
+               </section>
       <div className="container">
         <WhyWeBlock />
         <section className="reviews">
