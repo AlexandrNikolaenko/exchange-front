@@ -1,3 +1,5 @@
+'use server'
+
 import { ContactsIcon } from "@/components/core/icons/icon";
 
 export default function Page() {

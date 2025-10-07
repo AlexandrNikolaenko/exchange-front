@@ -1,6 +1,8 @@
+'use server'
+
 import Breadcrumbs from "@/components/core/breadcrumbs";
 
-export default function Page() {
+export default async function Page() {
   return (
     <div className="container">
       <Breadcrumbs pages={[{ name: "Партнерам", href: "/partners" }]} />

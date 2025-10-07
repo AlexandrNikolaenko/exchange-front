@@ -1,3 +1,5 @@
+'use server'
+
 import Breadcrumbs from "@/components/core/breadcrumbs";
 import { AuthIcon } from "@/components/core/icons/icon";
 import Image from "next/image";

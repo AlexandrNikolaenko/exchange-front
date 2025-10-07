@@ -1,3 +1,5 @@
+'use server'
+
 import Accordion from "@/components/core/accordion/accordion";
 import NewBlock from "@/components/core/news-block";
 

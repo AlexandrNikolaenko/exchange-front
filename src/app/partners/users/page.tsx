@@ -1,5 +1,11 @@
 import Breadcrumbs from "@/components/core/breadcrumbs";
 import NewBlock from "@/components/core/news-block";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Rules',
+  description: 'Rules',
+}
 
 export default function Page() {
   return (
