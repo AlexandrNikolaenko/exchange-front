@@ -2,7 +2,7 @@
 
 import { ContactsIcon } from "@/components/core/icons/icon";
 
-export default function Page() {
+export default async function Page() {
   return (
     <>
       <div className="container">

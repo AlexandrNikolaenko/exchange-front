@@ -4,7 +4,7 @@ import Accordion from "@/components/core/accordion/accordion";
 import Breadcrumbs from "@/components/core/breadcrumbs";
 import NewBlock from "@/components/core/news-block";
 
-export default function Page() {
+export default async function Page() {
   return (
     <div className="container">
       <Breadcrumbs pages={[{ name: "FAQ", href: "/faq" }]} />

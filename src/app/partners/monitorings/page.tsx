@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/core/breadcrumbs";
 import { AuthIcon } from "@/components/core/icons/icon";
 import Image from "next/image";
 
-export default function Page() {
+export default async function Page() {
   return (
     <div className="container">
       <Breadcrumbs

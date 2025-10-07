@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Exchange",
-  description: "Plaatform for exchange",
+  title: "Azazex",
+  description: "Platform for exchange",
 };
 
 export default function RootLayout({

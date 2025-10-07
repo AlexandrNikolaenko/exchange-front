@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Auth',
+  title: 'Azazex | Partners',
 }
 export default function Layout({children}: {children: ReactNode}) {
   return <>{children}</>

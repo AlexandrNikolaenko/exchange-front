@@ -3,7 +3,7 @@
 import Accordion from "@/components/core/accordion/accordion";
 import NewBlock from "@/components/core/news-block";
 
-export default function Page() {
+export default async function Page() {
   return (
     <>
       <div className="container">

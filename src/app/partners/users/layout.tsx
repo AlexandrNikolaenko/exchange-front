@@ -3,8 +3,7 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-  title: 'Rules',
-  description: 'Rules',
+  title: 'Azazex | Users',
 }
 
 export default function Layout({children}: {children: ReactNode}) {
