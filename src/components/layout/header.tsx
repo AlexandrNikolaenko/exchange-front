@@ -7,10 +7,20 @@ import NavLink from "../core/links/nav-link";
 import Link from "next/link";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [lang, setLang] = useState<'RU' | 'EN'>('RU');
+  const [isVisibleLang, setIsVisibleLang] = useState<boolean>(false)
 
   function handleVisibleMenu() {
     setIsOpen(!isOpen);
+  }
+
+  function handleChangeLang(value: 'RU' | 'EN') {
+    setLang(value);
+  }
+
+  function handleChangeVisibleLang() {
+    setIsVisibleLang(!isVisibleLang);
   }
 
   return (
@@ -31,11 +41,17 @@ export default function Header() {
           </nav>
           <div className="header__end">
             <div className="custom-lang-select">
-              <button className="lang-select">RU</button>
-              <div className="lang-options hide">
+              <button className="lang-select" onClick={handleChangeVisibleLang}>{lang}</button>
+              <div className={`lang-options ${isVisibleLang ? '' : 'hide'}`}>
                 <p>Выберите язык</p>
-                <button data-value="RU">Русский</button>
-                <button data-value="EN">English</button>
+                <button data-value="RU" onClick={() => {
+                  handleChangeLang('RU');
+                  handleChangeVisibleLang();
+                }}>Русский</button>
+                <button data-value="EN" onClick={() => {
+                  handleChangeLang('EN');
+                  handleChangeVisibleLang();
+                }}>English</button>
               </div>
             </div>
             <a className="login__button" href="/auth/signin">
@@ -95,11 +111,17 @@ export default function Header() {
           </ul>
           <div className="header__end">
             <div className="custom-lang-select">
-              <button className="lang-select">RU</button>
-              <div className="lang-options hide">
+              <button className="lang-select">{lang}</button>
+              <div className={`lang-options ${isVisibleLang ? '' : 'hide'}`}>
                 <p>Выберите язык</p>
-                <button data-value="RU">Русский</button>
-                <button data-value="EN">English</button>
+                <button data-value="RU" onClick={() => {
+                  handleChangeLang('RU');
+                  handleChangeVisibleLang();
+                }}>Русский</button>
+                <button data-value="EN" onClick={() => {
+                  handleChangeLang('RU');
+                  handleChangeVisibleLang();
+                }}>English</button>
               </div>
             </div>
             <a className="login__button" href="/auth/signin">
