@@ -36,9 +36,6 @@ export default function Page() {
           </li>
         </ul>
       </section>
-      <WhyWeBlock />
-      <div className="line"></div>
-      <NewBlock />
     </div>
   );
 }

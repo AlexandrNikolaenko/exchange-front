@@ -35,7 +35,6 @@ export default function Header() {
             <NavLink href={"/"}>Обмен</NavLink>
             <NavLink href={"/rules"}>Правила обмена</NavLink>
             <NavLink href={"/partners"}>Партнерам</NavLink>
-            <NavLink href={"/news"}>Новости</NavLink>
             <NavLink href={"/faq"}>FAQ</NavLink>
             <NavLink href={"/contacts"}>Контакты</NavLink>
           </nav>
@@ -98,9 +97,6 @@ export default function Header() {
             </li>
             <li>
               <Link href="/partners">Партнерам</Link>
-            </li>
-            <li>
-              <Link href="/news">Новости</Link>
             </li>
             <li>
               <Link href="/faq">FAQ</Link>
