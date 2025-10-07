@@ -49,14 +49,29 @@ export default function Header() {
           </div>
           <button onClick={handleVisibleMenu}>
             <ul className="burger">
-              <li style={{transform: isOpen ? 'translateY(9px) rotate(-45deg)': 'translateY(0px) rotate(0deg)'}}></li>
-              <li style={{width: isOpen ? '0' : '100%'}}></li>
-              <li style={{transform: isOpen ? 'translateY(-9px) rotate(45deg)' : 'translateY(0px) rotate(0deg'}}></li>
+              <li
+                style={{
+                  transform: isOpen
+                    ? "translateY(9px) rotate(-45deg)"
+                    : "translateY(0px) rotate(0deg)",
+                }}
+              ></li>
+              <li style={{ width: isOpen ? "0" : "100%" }}></li>
+              <li
+                style={{
+                  transform: isOpen
+                    ? "translateY(-9px) rotate(45deg)"
+                    : "translateY(0px) rotate(0deg",
+                }}
+              ></li>
             </ul>
           </button>
         </div>
       </div>
-      <div className="fall-menu" style={{transform: isOpen ? 'translateY(0%)' : 'translateY(-130%)'}}>
+      <div
+        className="fall-menu"
+        style={{ transform: isOpen ? "translateY(0%)" : "translateY(-130%)" }}
+      >
         <div className="base-header-menu">
           <ul className="header__list">
             <li>
@@ -100,10 +115,7 @@ export default function Header() {
             <ContactsIcon alt="twitter" src="/icons/Twitter.svg" />
           </a>
           <a href="#">
-            <ContactsIcon
-              alt="telegram"
-              src="/icons/telegram.svg"
-            />
+            <ContactsIcon alt="telegram" src="/icons/telegram.svg" />
           </a>
           <a href="#">
             <ContactsIcon alt="facebook" src="/icons/Facebook.svg" />
